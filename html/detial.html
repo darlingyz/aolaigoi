@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/detial.css"/>
+		<script src="../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/detials.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="detial">
+			<div class="detial_left">
+				<ul>
+					<li><img src="../img/JBg090.jpg"></li>
+					<li><img src="../img/biI421.jpg"></li>
+					<li><img src="../img/eec1430.jpg"></li>
+					<li><img src="../img/eF05590.jpg"></li>
+					<li><img src="../img/rh8000.jpg"></li>
+				</ul>
+				<span class="pre"></span>
+				<span class="next"></span>
+			</div>
+			<div class="detial_center">
+				<ul class="detial_center_ul">
+					<li class="detial_li"><img src="../img/00.jpg"></li>
+					<span class="cur"></span>
+				</ul>
+			</div>
+			<div class="detial_right">
+				<ul>
+					<li class="detial_right_li"><img src="../img/000.jpg"></li>					
+				</ul>
+			</div>
+			<div class="content_right">
+				<div class="content">
+					<p>viishow 潮牌新品欧美条纹男士长袖T恤 TC48363</p>
+					<p><i>奥 莱 价：</i><span>¥129.00</span> <em>¥338.00</em></p>
+					<p>选择颜色：<span>蓝色条纹</span></p>
+					<p>选择尺码:
+						<span>L</span><span>M</span><span>XL</span><span>XXL</span>
+					</p>
+					<div class="content_cen">
+						<em>选择数量剩余<i>5</i>件</em>
+						<input type="text" value="1" class="num">
+						<strong class="jia">+</strong>
+						<strong class="jian">-</strong>
+					</div>
+					<a href="shopping.html"><input type="button" value="加入购物车"class="btn"></a>	
+					<div class="banner_pic1">
+						<img src="../img/shouji.jpg">						
+						<p class="pic"><img src="../img/s377.jpg"></p>
+					</div>
+				</div>				
+			</div>
+		</div>
+		<script type="text/javascript">
+			jQuery.noConflict();
+			var oDetial=document.getElementsByClassName("detial_center_ul")[0];
+			var oMidImg=document.getElementsByClassName("detial_li")[0];
+			var oSpan=document.getElementsByClassName('cur')[0];
+			var oBgImg=document.getElementsByClassName('detial_right_li')[0]
+			var oBBgImg=oBgImg.getElementsByTagName("img")[0];
+			var oBGbor=document.getElementsByClassName("detial_right")[0];			
+			oDetial.onmousemove=function(e){
+				var evt=e||event;
+				var x=evt.pageX-oSpan.offsetWidth/2-jQuery(".detial_center_ul").offset().left;
+				var y=evt.pageY-oDetial.offsetTop-oSpan.offsetHeight/2;
+				oSpan.style.display="block";
+				oBGbor.style.display="block";
+				if(x<0){
+					x=0
+				}
+				if(x>=oMidImg.offsetWidth-oSpan.offsetWidth){
+					x=oMidImg.offsetWidth-oSpan.offsetWidth;
+				}if(y<0){
+					y=0
+				}if(y>=oMidImg.offsetHeight-oSpan.offsetHeight){
+					y=oMidImg.offsetHeight-oSpan.offsetHeight;
+				}
+				oSpan.style.left = x + "px";
+				oSpan.style.top = y + "px";
+				oBBgImg.style.left=-oBBgImg.offsetWidth / oMidImg.offsetWidth * x + "px";
+				oBBgImg.style.top=-oBBgImg.offsetHeight / oMidImg.offsetHeight * y + "px";
+				
+			}			
+			oDetial.onmouseleave=function(){
+				oSpan.style.display="none";
+				oBGbor.style.display="none";
+			}
+			</script>			
+	</body>
+</html>

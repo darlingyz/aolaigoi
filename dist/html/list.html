@@ -1,0 +1,94 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title><style type="text/css">*{
+				margin: 0;
+				padding: 0;
+			}
+			ul,li{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+				color: #f00;
+			}
+			#box{
+				width: 1300px;
+				height: auto;
+				margin: 0 auto;
+				border: 1px solid #F5F5F5;
+			}
+			.ser{
+				width: 400px;
+				height: 41px;
+				outline: none;
+				border: 1px solid #f00;
+				margin: 0 auto;
+				
+			}
+			.btn{
+				width: 100px;
+				height: 42px;
+				background: #f00;
+				color: #fff;
+				outline: none;
+				border: 1px solid #f00;
+				cursor: pointer;
+				
+			}
+			
+			.pic li{
+				width: 250px;
+				height: 450px;
+				border: 1px solid #f00;
+				float: left;
+			
+			}
+			.pic li p{
+				font-size: 14px;
+				color: #FF7800;
+				text-align: center;
+			}
+			.gwc{
+				width: 100px;
+				height: 40px;
+				background: #f00;
+				color: #fff;
+				outline: none;
+				border: 1px solid #f00;
+				cursor: pointer;
+				margin: 0 auto;
+				border-radius:8px ;
+				margin-left:80px
+			}
+			#count{
+				float: right;
+				width: 100px;
+				height: 40px;
+				border: 1px solid #f00;
+				border-radius: 6px;
+				line-height: 40px;
+			}
+			#count span{
+				display: block;
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				background: #f00;
+				color:  #fff;
+				border-radius: 50%;
+				position: absolute;
+				top:10px;
+				right: 60px;
+				text-align: center;
+			}</style></head><body><div id="box"><input type="text" class="ser"><input type="button" value="搜索" class="btn"><div id="count"><a href="cart.html">我的购物车<span id="num">0</span></a></div><ul class="pic"></ul></div><script src="../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script><script src="../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script><script src="../js/cart.js" type="text/javascript" charset="utf-8"></script><script type="text/javascript">var $oUl=$(".pic");
+			var $oLi=$oUl.find("li");			
+				$.get("../json/list.json",function(data){
+				var html="";
+			for(var i in data){
+				html+="<li><a href='detials.html?id="+i+"'><img src='"+data[i].imgUrl+"'></a><p>"+data[i].title+"</p><p>"+data[i].price+"</p><input type='button' value='加入购物车'class='gwc' data-id='"+i+"'></li>"
+			}					
+			$oUl.html(html);		
+			$(".gwc").on("click",function(){
+					var id = $(this).attr("data-id");
+					cookie(id,1,false);
+				})
+			
+		})</script></body></html>

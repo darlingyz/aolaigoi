@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  height: 0; }
+
+ul, li {
+  list-style: none; }
+
+#list {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden; }
+
+.names {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  color: #C81417; }
+
+h3 {
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  font-size: 14px;
+  display: block;
+  border-bottom: 2px solid #C81417; }
+
+.list_content {
+  width: 1200px;
+  min-height: 400px;
+  height: auto;
+  border: 1px solid #f1f1f1;
+  margin-top: 20px;
+  box-sizing: border-box; }
+
+.title {
+  width: 100%;
+  height: 44px;
+  background: #fafafa;
+  border-bottom: 1px solid #f1f1f1;
+  display: flex; }
+
+.title li {
+  flex: 0.6;
+  line-height: 40px;
+  font-size: 12px;
+  color: #7E7E70; }
+
+li:nth-of-type(2) {
+  flex: 2;
+  text-align: center; }
+
+dl {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #F0F0F0; }
+
+input {
+  width: 15px;
+  height: 15px;
+  float: left;
+  margin: 40px 20px 0 20px; }
+
+dt {
+  width: 350px;
+  height: 60px;
+  float: left;
+  margin: 20px; }
+
+dt img {
+  width: 60px;
+  height: 60px;
+  float: left; }
+
+dt p {
+  text-indent: 20px;
+  width: 280px;
+  height: 20px;
+  float: left;
+  font-size: 14px;
+  line-height: 20px; }
+
+dt span {
+  display: block;
+  width: 80px;
+  height: 20px;
+  float: left;
+  font-size: 14px;
+  line-height: 20px;
+  text-indent: 20px; }
+
+dd {
+  width: 680px;
+  height: 60px;
+  margin: 20px 0 0 70px;
+  float: left;
+  display: flex; }
+
+dd p {
+  flex: 1;
+  text-align: center;
+  line-height: 60px;
+  font-size: 14px; }
+
+dd p:nth-of-type(1) {
+  flex: 1.2; }
+
+dd p:nth-of-type(2) {
+  width: 30px;
+  height: 20px; }
+
+dd p span:nth-of-type(1) {
+  display: block;
+  margin: 0px 0 0 -70px;
+  cursor: pointer; }
+
+dd p span:nth-of-type(2) {
+  display: block;
+  margin: 0px 0 0 -100px;
+  cursor: pointer; }
+
+dd p input {
+  margin: 18px 0 0 50px;
+  text-align: center;
+  outline: none; }
+
+dd p strong {
+  font-style: inherit;
+  cursor: pointer;
+  font-weight: 100;
+  display: block; }
+
+dd p em {
+  font-style: inherit;
+  cursor: pointer;
+  position: absolute;
+  top: 145px; }
+
+.down {
+  width: 1200px;
+  height: 100px;
+  line-height: 100px;
+  background: #fafafa;
+  margin: 0 auto; }
+
+.down p {
+  width: 80px;
+  height: 100px;
+  float: left;
+  text-align: center; }
+
+.down p:nth-of-type(2) {
+  width: 80px;
+  height: 100px;
+  float: left; }
+
+.down p:nth-of-type(3) {
+  width: 150px;
+  height: 100px;
+  float: left;
+  margin-left: 500px; }
+
+.down p:nth-of-type(3) strong {
+  font-weight: 100; }
+
+.down p:nth-of-type(3) i {
+  font-style: inherit;
+  color: #f00; }
+
+.down input:nth-of-type(2) {
+  float: left;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  outline: none;
+  margin-left: 40px;
+  background: #f00;
+  border: 1px solid #f00;
+  color: #fff;
+  cursor: pointer; }
+
+.down input:nth-of-type(3) {
+  float: left;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  outline: none;
+  background: #f00;
+  border: 1px solid #f00;
+  color: #fff;
+  cursor: pointer; }
+
+/*# sourceMappingURL=shopping.css.map */

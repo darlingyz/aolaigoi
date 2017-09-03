@@ -1,0 +1,239 @@
+@charset "UTF-8";
+body, dd, dt, html, img, input, li, p, ul, img {
+  margin: 0;
+  padding: 0; }
+
+body,
+html {
+  background: #fff;
+  font-size: 12px;
+  font-style: "微软雅黑";
+  color: #7e7e7e; }
+
+a {
+  text-decoration: none; }
+
+ul, li {
+  list-style: none; }
+
+#regist-foot,
+#regist-header,
+#regist-main {
+  width: 1200px;
+  margin: auto;
+  background: #fff; }
+
+#regist-header {
+  height: 120px;
+  overflow: hidden; }
+  #regist-header .regist-h-left {
+    margin-top: 35px;
+    width: 240px;
+    float: left; }
+  #regist-header .regist-h-right {
+    float: right; }
+
+.foot-long {
+  height: 120px;
+  margin-right: 20px; }
+  .foot-long li {
+    margin: 0 46px;
+    float: left;
+    height: 120px;
+    overflow: hidden;
+    position: relative; }
+    .foot-long li .long-icon {
+      position: absolute;
+      top: 25px;
+      left: 10px;
+      width: 62px;
+      height: 62px; }
+    .foot-long li .long-desc {
+      margin: 30px 0 0 85px;
+      height: 58px;
+      line-height: 29px; }
+      .foot-long li .long-desc .btit {
+        font-size: 18px;
+        color: #d61518;
+        font-weight: 900; }
+      .foot-long li .long-desc .stit {
+        color: #333333; }
+  .foot-long li:first-child .long-icon {
+    background: url("../img/foot-sprite.png") -270px -105px; }
+  .foot-long li:nth-child(2) .long-icon {
+    background: url("../img/foot-sprite.png") -450px -105px; }
+  .foot-long li:nth-child(3) .long-icon {
+    background: url("../img/foot-sprite.png") -540px -105px; }
+
+#regist-main {
+  height: 590px; }
+  #regist-main .regist-m-left {
+    width: 673px;
+    height: 558px;
+    overflow: hidden;
+    float: left; }
+    #regist-main .regist-m-left img {
+      width: 673px;
+      height: 558px; }
+  #regist-main .regist-m-right form {
+    position: relative;
+    margin-top: 75px;
+    width: 340px;
+    height: 387px;
+    border: 1px solid #d0d0d0;
+    float: right; }
+    #regist-main .regist-m-right form .regist-main-bg {
+      width: 342px;
+      height: 234px; }
+    #regist-main .regist-m-right form .regist-change:first-child {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      width: 50px;
+      height: 50px;
+      background: url(../img/right-myCenter.png) -10px -75px; }
+    #regist-main .regist-m-right form .regist-change:nth-child(2) {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      width: 50px;
+      height: 50px;
+      background: url(../img/right-myCenter.png) -80px -75px;
+      display: none; }
+    #regist-main .regist-m-right form .ljzc {
+      line-height: 50px;
+      color: #ff7800;
+      margin-left: 20px; }
+      #regist-main .regist-m-right form .ljzc:hover {
+        color: #c81417; }
+    #regist-main .regist-m-right form .error {
+      height: 30px;
+      line-height: 30px; }
+    #regist-main .regist-m-right form .regist-main:first-child {
+      width: 242px;
+      padding-left: 50px; }
+      #regist-main .regist-m-right form .regist-main:first-child .remeber {
+        color: #a7a7a7; }
+        #regist-main .regist-m-right form .regist-main:first-child .remeber input {
+          width: 14px;
+          height: 14px;
+          vertical-align: middle; }
+        #regist-main .regist-m-right form .regist-main:first-child .remeber label {
+          margin-left: 14px;
+          vertical-align: middle; }
+        #regist-main .regist-m-right form .regist-main:first-child .remeber a {
+          float: right;
+          color: #a7a7a7; }
+          #regist-main .regist-m-right form .regist-main:first-child .remeber a:hover {
+            color: #c81417; }
+      #regist-main .regist-m-right form .regist-main:first-child .inputb {
+        border-radius: 10px;
+        width: 240px;
+        height: 42px;
+        border: none;
+        border: 1px solid #D0D0D0; }
+      #regist-main .regist-m-right form .regist-main:first-child .username input {
+        text-indent: 4em;
+        outline: none;
+        background: url(../img/xb-zh.jpg) no-repeat 0px 5px; }
+      #regist-main .regist-m-right form .regist-main:first-child .password input {
+        text-indent: 4em;
+        outline: none;
+        background: url(../img/xb-mm.jpg) no-repeat 0px 5px; }
+      #regist-main .regist-m-right form .regist-main:first-child #tj {
+        background: #c81417;
+        color: #fff;
+        border-radius: 8px;
+        margin: 13px 0;
+        cursor: pointer; }
+    #regist-main .regist-m-right form .regist-main:last-child {
+      position: absolute;
+      top: 50px;
+      width: 242px;
+      margin-left: 50px; }
+      #regist-main .regist-m-right form .regist-main:last-child img {
+        margin-left: 36px;
+        width: 170px;
+        height: 170px; }
+      #regist-main .regist-m-right form .regist-main:last-child .sys {
+        width: 242px;
+        height: 40px; }
+        #regist-main .regist-m-right form .regist-main:last-child .sys div {
+          float: left;
+          margin-left: 25px;
+          width: 60px;
+          height: 40px;
+          background: url(../img/er3.jpg) -10px 0; }
+        #regist-main .regist-m-right form .regist-main:last-child .sys p {
+          float: right;
+          margin-right: 24px;
+          width: 129px;
+          height: 36px;
+          color: #a7a7a7; }
+          #regist-main .regist-m-right form .regist-main:last-child .sys p a {
+            color: #f00; }
+    #regist-main .regist-m-right form .wxzc {
+      text-align: center;
+      line-height: 35px; }
+    #regist-main .regist-m-right form .other-login {
+      width: 170px;
+      height: 65px;
+      margin: auto; }
+      #regist-main .regist-m-right form .other-login li {
+        width: 85px;
+        height: 55px;
+        float: left; }
+        #regist-main .regist-m-right form .other-login li p {
+          text-align: center; }
+  #regist-main .other-login .qq i {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../img/core.png) no-repeat 0 -180px;
+    padding-bottom: 7px;
+    margin-left: 28px; }
+  #regist-main .other-login .login-wechat i {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../img/core.png) no-repeat 0 -225px;
+    padding-bottom: 7px;
+    margin-left: 28px; }
+
+.foot-link {
+  text-align: center; }
+  .foot-link ul {
+    width: 550px;
+    overflow: hidden;
+    margin: 28px auto 0; }
+  .foot-link li {
+    float: left;
+    margin-left: 12px; }
+    .foot-link li a {
+      color: #666666; }
+      .foot-link li a:hover {
+        color: red; }
+  .foot-link p {
+    line-height: 35px; }
+  .foot-link .friend-link ul {
+    width: 820px; }
+  .foot-link .friend-link li {
+    margin-left: 10px;
+    width: 87px;
+    height: 35px; }
+    .foot-link .friend-link li:nth-child(1) {
+      background: url("../img/foot-sprite.png") -18px -28px; }
+    .foot-link .friend-link li:nth-child(2) {
+      background: url("../img/foot-sprite.png") -891px -28px; }
+    .foot-link .friend-link li:nth-child(3) {
+      background: url("../img/foot-sprite.png") -112px -28px; }
+    .foot-link .friend-link li:nth-child(4) {
+      background: url("../img/foot-sprite.png") -205px -28px; }
+    .foot-link .friend-link li:nth-child(5) {
+      background: url("../img/foot-sprite.png") -394px -28px; }
+    .foot-link .friend-link li:nth-child(6) {
+      background: url("../img/foot-sprite.png") -490px -28px; }
+    .foot-link .friend-link li:nth-child(7) {
+      background: url("../img/foot-sprite.png") -575px -28px; }
+    .foot-link .friend-link li:nth-child(8) {
+      background: url("../img/foot-sprite.png") -690px -28px; }

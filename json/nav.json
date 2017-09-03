@@ -1,0 +1,72 @@
+{
+		"subNavLists": [
+			{
+				"subNavTit": "奢侈品",
+				"subNavList": [
+					"包装",
+					"服装",
+					"配饰"
+				]
+			},
+			{
+				"subNavTit": "女　装",
+				"subNavList": [
+					"连衣裙",
+					"T恤",
+					"衬衫"
+				]
+			},
+			{
+				"subNavTit": "男　装",
+				"subNavList": [
+					"衬衫",
+					"T恤",
+					"休闲裤"
+				]
+			},
+			{
+				"subNavTit": "运　动",
+				"subNavList": [
+					"男运动服",
+					"女运动服"
+				]
+			},
+			{
+				"subNavTit": "鞋　靴",
+				"subNavList": [
+					"休闲鞋",
+					"高跟鞋"
+				]
+			},
+			{
+				"subNavTit": "箱　包",
+				"subNavList": [
+					"男包",
+					"女包",
+					"手提包"
+				]
+			},
+			{
+				"subNavTit": "内　衣",
+				"subNavList": [
+					"文胸",
+					"内裤",
+					"睡衣"
+				]
+			},
+			{
+				"subNavTit": "婴　童",
+				"subNavList": [
+					"童鞋",
+					"宝宝用品"
+				]
+			},
+			{
+				"subNavTit": "跨境汇",
+				"subNavList": [
+					"进口美妆",
+					"进口母婴"					
+				]
+			}
+		]
+	}

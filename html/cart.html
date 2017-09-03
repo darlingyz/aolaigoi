@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/cart.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul,li,ol{
+				list-style: none;
+			}
+			a{
+				text-decoration:none;
+			}
+			img{
+				width: 60px;
+				height: 80px;
+				float: left;
+			
+			}
+			p{
+				width: 1200px;
+				height: 40px;
+				line-height: 40px;
+				font-size: 14px;
+				display: flex;
+				margin: 0 auto;
+				border: 1px solid #f0f0f0;
+			/*	text-align: center;*/
+			}
+			p span{
+				flex: 1;
+			}
+			#cart{
+				width: 1200px;
+				min-height:400px;
+				height: auto;
+				border: 1px solid #f00;
+				margin: 0 auto;
+			}
+			#cart li{
+				width: 1200px;
+				height: 80px;
+				line-height: 80px;
+				border-bottom:1px solid #f00 ;		
+				display: flex;
+						
+			}
+			#cart li span{
+				flex: 1;
+				text-align: center;
+			}
+			.removes{
+				flex: 1;
+				cursor: pointer;
+			}
+			input{
+				width: 40px;
+				height: 25px;
+				outline: none;
+			}
+			em{
+				font-style: inherit;
+				font-size: 20px;
+				cursor: pointer;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h1>购物车</h1>
+		<p>	<span>图片信息</span>
+			<span>订单商品名称</span>
+			<span>单价</span>
+			<span>数量</span>
+			<span>删除</span>
+			
+			</p>
+		<ul id="cart"></ul>
+		
+		<script type="text/javascript">
+	$(function(){			
+		$.get("../json/list.json",function(data){
+			var strCookie=$.cookie("carts");
+			var objCookie=strCookie ? JSON.parse(strCookie):{};
+			var html="";
+			for(var attr in objCookie){
+			html+="<li><img src='"+data[attr].imgUrl+"'><span>"+data[attr].title+"</span><span>"+data[attr].price+"</span><span id='"+attr+"'><em class='minus'>-</em><input type='text' value='"+objCookie[attr]+"'/><em class='plus'>+</em></span><span id='"+attr+"' class='removes'>删除</span></li>"
+			
+			}
+			$("#cart").html(html);
+			
+		$(".minus").on("click",function(){
+			var id=$(this).parent().attr("id");
+			if(objCookie[id]>1){				
+			var num=--objCookie[id];
+			$(this).siblings("input").val(num);
+			cookie(id,num,true);
+			return false;
+			}			
+		})
+			
+		$(".plus").on("click",function(){
+			var id=$(this).parent().attr("id");
+			console.log($(this).parent())
+			var num=++objCookie[id];
+			$(this).siblings("input").val(num);
+			cookie(id,num,true);
+			return false;
+		})	
+		$(".removes").on("click",function(){
+			var id=$(this).attr("id");
+		})
+	})	
+})						
+		</script>
+		
+	</body>
+</html>
